@@ -1,0 +1,18 @@
+<div *ngIf="user" >
+    <mat-card class="center-card">
+        <mat-card-content>       
+            <mat-card-subtitle>
+                <div class="container" fxLayout fxLayout.xs="column" fxLayoutAlign="center" fxLAyoutGap="10px" fxLayoutGap.xs="0">
+                    <div class="item1" fxFlex=30% style="justify-content: center">
+                        <h3 class="firstelement">{{user.name}}</h3>
+                        <h6 class="secondelement">Name</h6>
+                    </div>
+                    <div class="item3" fxFlex=30%>
+                        <h3 class="firstelement">{{user.userName}}</h3>
+                        <h6 class="secondelement">UserName</h6>
+                    </div>  
+                </div>                       
+            </mat-card-subtitle>
+        </mat-card-content>        
+    </mat-card>
+    </div>

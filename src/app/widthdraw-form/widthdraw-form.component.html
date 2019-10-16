@@ -1,0 +1,19 @@
+<div>
+    <form #f="ngForm" [formGroup]="form" (ngSubmit)="addWithdraw()">  
+        <mat-card class="center-card alternate-theme"  >             
+            <mat-card-content>                  
+                    <mat-form-field class="input-width" >
+                        <mat-label>Amount</mat-label>
+                        <input matInput formControlName="amount" name="amount" required numbersOnly>
+                       <mat-error *ngIf="amount.invalid">{{getErrorMessage()}}</mat-error>                               
+                    </mat-form-field>                 
+                        <mat-error *ngIf="error" class="alert alert-danger mt-3 mb-0 errormessage ">{{error}} </mat-error>                         
+            </mat-card-content>
+            <mat-card-actions class="buttonaction">
+                <button *ngIf="!f.valid" mat-button type="submit" color="primary" [disabled]="!f.valid" >SUBMIT</button>
+                <button *ngIf="f.valid" mat-button  color="primary" >SUBMIT</button>            
+            </mat-card-actions>   
+        </mat-card>
+    </form>
+</div>
+
